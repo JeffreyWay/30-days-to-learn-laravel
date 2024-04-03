@@ -21,22 +21,6 @@ Route::get('/jobs/{id}', function ($id) {
     return view('job', ['job' => $job]);
 });
 
-Route::post('/jobs', function () {
-    request()->validate([
-        'employer_id' => ['required', 'exists:employers'],
-        'title'       => ['required'],
-        'salary'      => ['required'],
-    ]);
-});
-
-
-
-
-
-
-
-
-
 Route::get('/contact', function () {
     return view('contact');
 });
